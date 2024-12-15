@@ -1,0 +1,279 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portf </title>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navbar Section -->
+    <nav id="navbar" class="flex s-around bg-color">
+        <div class="left-nav">
+            <h2 class="t-white">Emma.Bangwen</h2>
+        </div>
+        <div class="right-nav">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Accueil <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">À propos de moi <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="t-white roboto">Compétences <i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#Projects" class="t-white roboto">Projets <i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+        
+
+
+    <!-- Home Section -->
+    <section id="home" class="flex s-around sw-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="poppinss">Salut, je suis</h6>
+                <h1 class="t-white">Emmanuel Bangwen</h1>
+                <h4 class="poppinss">Développeur Python</h4>
+                <a href="{% static 'pdf/django.pdf' %}"  target="_blank">
+                    <button class="btn poppins">CV</button></a>
+                    
+                <a class="btn live poppins" id="hireme" href=""
+                    target="_blank">Discutons</a>
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainImage">
+               
+                <img src="{% static 'images/mypic.png'%}" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2">À propos de moi</h1>
+        <div class="about-container flex s-around ">
+            <div class=" about-left flex s-center items-center">
+                <!-- Here in src replade the given link with your secondary image link -->
+                <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%;">
+            </div>
+
+            <div class="about-right flex">
+                <div class="about-content">
+                    <h1 class="t-white m-b-1 poppins">Emmanuel Bangwen</h1>
+                    <p class="t-white poppins">
+                        Je m'appelle Emmanuel Bangwen. Étudiant en ingénierie agronomique, je suis passionné par l'intégration des technologies modernes dans le secteur agricole. Avec une expertise en Python, Django, Power BI, et les technologies AgTech, je m'efforce de créer des solutions innovantes qui aident les entreprises agricoles à automatiser leurs opérations et à prendre des décisions basées sur les données. Bien que j'apprécie généralement tous les aspects de mon travail, ce qui me motive le plus est de concevoir des outils pratiques et efficaces pour améliorer la productivité et l'efficacité dans le domaine agricole. Je suis également enthousiaste à l'idée d'apprendre et de collaborer pour résoudre des défis complexes dans le secteur.
+                        
+                    </p>
+                   <a class="btn " id="hireme"
+                        href="">Engagez-moi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1 class="t-center my-2 t-white f-2">Compétences</h1>
+        <div class="services-container flex s-around h-50">
+        <div class=" skills-left flex s-center items-center">
+            <img src="{%static 'images/pro.png'%}" alt="">
+        </div>
+
+        <div class="skills-right flex items-center">
+            <div class="skillss-container">
+                <div class="java bar p-relative"><span class="bar-content left t-white">Python</span><span
+                        class="bar-content right-skills t-white">60%</span></div>
+                <div class="html bar p-relative"><span class="bar-content left t-white">PostgreSql</span><span
+                        class="bar-content right-skills t-white">50%</span></div>
+                <div class="css bar p-relative"><span class="bar-content left t-white">Excel</span><span
+                        class="bar-content right-skills t-white">40%</span></div>
+                <div class="js bar p-relative"><span class="bar-content left t-white">Power BI</span><span
+                        class="bar-content right-skills t-white">30%</span></div>
+                <div class="python bar p-relative"><span class="bar-content left t-white">HTML</span><span
+                        class="bar-content right-skills t-white">30%</span></div>
+                <div class="mysql bar p-relative"><span class="bar-content left t-white">Git</span><span
+                        class="bar-content right-skills t-white">20%</span></div>        
+            </div>
+        </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Projects Section -->
+    <section id="Projects">
+        <h1 class=" t-center my-2 t-white f-2">Projets</h1>
+        <div class="projects-container flex s-center">
+            <div class="projects-item flex f-col s-center items-center">
+               
+                <h1 class="t-white poppins">BangPig :
+                     Application de gestion d'une ferme
+                </h1>
+                <p class="t-white poppins">Cette application a été créée pour 
+                    aider les éleveurs de Porcs à gérer efficacement les données de leurs animaux. 
+                    Inspirée d’une rencontre avec un éleveur de porcs confronté à des défis 
+                    dans l'identification et le suivi des animaux, elle offre une interface 
+                    intuitive pour organiser des informations essentielles telles que l'identification, 
+                    l'âge, le poids, la date de naissance et le sexe des animaux.
+
+                    Fonctionnalités clés :
+                    
+                    Ajout et Supprimer des porcs : suivi détaillé de chaque animal.
+                    Gestion des reproductions : enregistrement des données de reproduction.
+                    Gestion des naissance et maladies : enregistrement des données de naissance et maladies.
+                    Fonctionnalité CRUD : création, lecture, mise à jour et suppression des données.
+
+                    Technologies utilisées :
+                    
+                    Backend : Django (Python)
+                    Frontend : HTML, CSS, JavaScript</p>
+                <div class="buttons flex s-around">
+                    <a href="
+                    https://github.com/EmmanuelBANGWEN/BangPig-Agtech"
+                        target="_blanks" class="btn mx-1 m-top">GitHub</a>
+                    <a href="" target="_blanks" class="btn m-top live">Lien en direct</a>
+                </div>
+            </div>
+
+
+            <div class="projects-item flex f-col s-center items-center">
+               
+                <h1 class="t-white poppins">Bangri : Un plateforme proposant des solutions Agtech
+                </h1>
+                <p class="t-white poppins">
+                    Bangri-AgTech est une plateforme innovante visant à améliorer les rendements agricoles et l’efficacité des exploitations grâce à des technologies de pointe comme l’analyse de données et la visualisation interactive.
+
+Services proposés :
+
+Consultations : Accompagnement personnalisé pour optimiser les pratiques agricoles.
+Développement de logiciels : Solutions numériques adaptées aux besoins des exploitants.
+Marketing digital : Stratégies pour valoriser les produits agricoles et renforcer la présence en ligne.
+Analyse prédictive : Modèles basés sur des données climatiques et historiques.
+Visualisation des données : Tableaux de bord pour un suivi clair des performances.
+Gestion des ressources : Optimisation des intrants pour réduire les coûts et maximiser l’efficacité.
+Technologies utilisées : Django, PostgreSQL, Power BI, Python, HTML, CSS, JavaScript.           
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/EmmanuelBANGWEN/bangri-agtech" target="_blanks"
+                        class="btn mx-1 m-top">GitHub</a>
+                    <a href="
+                    " target="_blanks" class="btn m-top live">Lien en direct</a>
+                </div>
+            </div>
+
+
+
+            <div class="projects-item flex f-col s-center items-center">
+               
+                <h1 class="t-white poppins">Zbang : pour la gestion des ruches 
+                                            et récoltes de miel
+                </h1>
+                <p class="t-white poppins">
+                    Zbang est une application conçue pour simplifier la gestion des ruches et 
+                    le suivi des récoltes pour les apiculteurs. Elle offre des outils interactifs pour
+                     surveiller l’état des ruches, gérer les récoltes de miel, et analyser les performances
+                      sur une période donnée grâce à des graphiques et statistiques clairs.
+
+                    Fonctionnalités clés :
+                    
+                    Ajout et gestion des ruches : suivi détaillé de chaque colonie.
+                    Gestion des récoltes : enregistrement des données de production (quantité, date).
+                    Tableau de bord interactif : visualisation des données sous forme de graphiques et statistiques.
+                    Fonctionnalité CRUD : création, lecture, mise à jour et suppression des données.
+                    Technologies utilisées :
+                    
+                    Backend : Django (Python)
+                    Base de données : PostgreSQL
+                    Frontend : HTML, CSS, JavaScript                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/EmmanuelBANGWEN/ma-ruche-d-abeille" target="_blanks"
+                        class="btn mx-1 m-top">GitHub</a>
+                    <a href="
+                    " target="_blanks" class="btn m-top live">Lien en direct</a>
+                </div>
+            </div>
+
+            <div class="projects-item flex f-col s-center items-center">
+               
+                <h1 class="t-white poppins">Mon portfolio</h1>
+                <p class="t-white poppins">Ceci est mon site portfolio créé avec Django, HTML, CSS et Javascript, qui décrit mes compétences et mes connaissances. Mon site portfolio met en valeur mon travail avec un design élégant et minimaliste, permettant de se concentrer sur le contenu lui-même. La mise en page est épurée, ce qui permet aux visiteurs de naviguer facilement et d'explorer mes projets.</p>
+                <div class="buttons flex s-around">
+                    <a href="" target="_blanks"
+                        class="btn mx-1 m-top">GitHub</a>
+                    <a href="#" target="_blanks" class="btn m-top live">Lien en direct</a>
+                </div>
+            </div>
+           
+         </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="Contact" class="m-b-1">
+        <h1 class=" t-center my-2 t-white f-2">Contactez-moi</h1>
+        <div class="contact-container flex s-around items-centers">
+            <div class="form" id="contactForm">
+                <form method="post" > 
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Entrez votre nom">
+                    </div>
+
+                    <div class="email form-div">
+                        <input type="email" name="email" id="" class="poppins" placeholder="Entrez votre email"
+                            required>
+                    </div>
+
+                    <div class="phone form-div">
+                        <input type="phone" name="number" id="" class="poppins" placeholder="Entrez votre numéro"
+                            required>
+                    </div>
+                    
+                    <div class="textarea form-div">
+                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
+                            placeholder="Entrez votre message"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppinss">Accueil</a></li>
+            <li><a href="#about" class="poppinss">À propos</a></li>
+            <li><a href="#skills" class="poppinss">Compétences</a></li>
+            <li><a href="#projects" class="poppinss">Projets</a></li>
+            <li><a href="#portfolio" class="poppinss">Portfolio</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome ">
+            <a href="" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <a href="" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>
+            </a>
+                <a href="" target="_blank">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+            </a>
+            
+        </ul>
+        <p class="t-center my-2 poppins">&copy; Tous droits réservés - <span class="cpy-white poppins">Emmanuel Bangwen 
+                </span></p>
+
+    </footer>
+     
+</body> 
+</html>
