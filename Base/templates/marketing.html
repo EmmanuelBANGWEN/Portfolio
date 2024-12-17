@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Services</li>
+
+          <li class="current">Marketing Digital</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Marketing Digital
+           </h2>
+           <p>
+            J’aide mes clients à accroître leur visibilité et à vendre leurs produits plus rapidement grâce à des stratégies digitales sur mesure. Cela inclut la création de campagnes ciblées, l’optimisation de leur présence en ligne, et l’utilisation des outils numériques pour atteindre leurs objectifs marketing.
+
+        </p>
+          </div>
+
+        <div class="col-mb-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Outils</h3>
+            <ul>
+              <li><strong>Facebook Ads</strong>
+            <li><strong>Canva</strong>
+                
+
+          </ul>    
+
+          </div>
+        </div>
+
+          <div class="col-mb-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+             
+          <h3>Compétences</h3>
+          <ul>
+                <li><strong>    Définition et mise en œuvre de stratégies marketing adaptées.
+                </strong>
+                <li><strong>       Création et gestion de campagnes publicitaires en ligne.
+                </strong>
+                <li><strong>      Conception de visuels attrayants pour les réseaux sociaux et sites web.
+                </strong>
+                <li><strong>    Analyse des performances des campagnes et optimisation continue.
+                </strong>
+
+               
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+
+{% endblock content %}

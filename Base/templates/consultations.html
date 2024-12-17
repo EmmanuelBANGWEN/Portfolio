@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Services</li>
+
+          <li class="current">Consultations</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Consultations
+           </h2>
+           <p>
+            J'accompagne les entreprises agricoles en leur offrant des solutions sur mesure pour améliorer
+     leurs rendements, optimiser leurs processus et relever leurs défis spécifiques. Mon objectif 
+     est d’aider les exploitants à tirer le meilleur parti des nouvelles technologies et des outils
+      numériques pour transformer leur activité.
+
+        </p>
+          </div>
+
+        <div class="col-mb-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Outils</h3>
+            <ul>
+              <li><strong>Analyse SWOT</strong>
+            <li><strong>Gestion de projet</strong>
+
+          </ul>    
+
+          </div>
+        </div>
+
+          <div class="col-mb-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+             
+          <h3>Compétences</h3>
+          <ul>
+                <li><strong>    Diagnostic des besoins et problèmes spécifiques.
+                </strong>
+                <li><strong>Expertise en pratiques agricoles et AgTech.</strong>
+                <li><strong>Conseils stratégiques adaptés au contexte local.</strong>
+                <li><strong>Capacité découte active et de résolution de problèmes.</strong>
+
+               
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+
+{% endblock content %}

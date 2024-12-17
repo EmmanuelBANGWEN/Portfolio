@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Services</li>
+
+          <li class="current">Transformation Digitale</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Transformation Digitale
+           </h2>
+           <p>
+            J’accompagne mes clients dans leur transition vers le numérique en les aidant à intégrer des solutions digitales adaptées à leurs besoins. Mon objectif est de moderniser leurs processus, d’améliorer leur productivité et de maximiser leurs revenus grâce à l’innovation technologique.
+
+        </p>
+          </div>
+
+        <div class="col-mb-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Outils</h3>
+            <ul>
+              <li><strong>Les outils d'IA(ChatGpt, Pleplexity, Dall-E ...)</strong>
+            <li><strong>Canva</strong>
+                <li><strong>Plateforme professionnelle (Linkedin)</strong>
+                
+
+          </ul>    
+
+          </div>
+        </div>
+
+          <div class="col-mb-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+             
+          <h3>Compétences</h3>
+          <ul>
+                <li><strong>    Évaluation des besoins en digitalisation et identification des opportunités.
+                </strong>
+                <li><strong>         Formation à l’utilisation des outils numériques.
+                </strong>
+                <li><strong>    Conception et implémentation de solutions innovantes.
+                </strong>
+                <li><strong>      Gestion du changement pour une adoption fluide des technologies.
+                </strong>
+
+               
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+
+{% endblock content %}

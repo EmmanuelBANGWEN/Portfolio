@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Zbang</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
+              }
+            </script>
+
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/zbang.png' %}" class="img-fluid" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/zbang2.png' %}" class="img-fluid" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/zbang3.png' %}" class="img-fluid" alt="">
+              </div>
+              
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/zbang4.png' %}" class="img-fluid" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/zbang5.png' %}" class="img-fluid" alt="">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Technologies utilisées</h3>
+            <ul>
+                <li><strong>Backend :</strong> Django (Python) pour la logique métier et la gestion des données.</li>
+                <li><strong>Base de données :</strong> PostgreSQL pour un stockage fiable et structuré.</li>
+                <li><strong>Frontend :</strong> HTML, CSS, JavaScript pour une interface utilisateur moderne et responsive.</li>
+                <li><strong>Dashboard :</strong> Plotly pour une visualisation attractive </li>
+                <li><strong>Github</strong>: <a href="https://github.com/EmmanuelBANGWEN/ma-ruche-d-abeille" target="_blank" class="btn mx-1 m-top">Click ici</a></li>
+            </ul>
+          </div>
+          <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Zbang : pour la gestion des ruches              et récoltes de miel</h2>
+            <p>
+              Zbang est une application innovante destinée aux apiculteurs pour simplifier la gestion des ruches et optimiser le suivi des récoltes de miel. 
+              Grâce à ses outils interactifs et intuitifs, elle permet de surveiller l’état des ruches, de gérer les récoltes et d’analyser les performances au fil du temps.
+                     </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+
+{% endblock content %}

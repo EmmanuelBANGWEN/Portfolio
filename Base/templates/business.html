@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Services</li>
+
+          <li class="current">Business Intelligence</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Business Intelligence
+           </h2>
+           <p>
+            J’utilise des analyses mathématiques, des statistiques et des outils de visualisation pour transformer les données en informations exploitables. Ces analyses permettent à mes clients de prendre des décisions stratégiques basées sur des faits et d’améliorer leur efficacité opérationnelle.
+        </p>
+          </div>
+
+        <div class="col-mb-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Outils</h3>
+            <ul>
+              <li><strong>Power BI</strong>
+            <li><strong>Excel</strong>
+                <li><strong>Python (bibliothèques analytiques comme Pandas, Matplotlib)</strong>
+                    <li><strong>Statistiques</strong>
+                        
+          </ul>    
+
+          </div>
+        </div>
+
+          <div class="col-mb-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+             
+          <h3>Compétences</h3>
+          <ul>
+                <li><strong>      Analyse et interprétation des données agricoles (rendement, coût, utilisation des intrants).
+                </strong>
+                <li><strong>          Conception de tableaux de bord interactifs et visuels.
+                </strong>
+                <li><strong>         Calcul et gestion des risques.
+                </strong>
+                <li><strong>       Prise de décision stratégique basée sur des données.
+                </strong>
+                <li><strong>        Résolution de problèmes complexes grâce à une logique structurée.
+                </strong>
+
+               
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+
+{% endblock content %}

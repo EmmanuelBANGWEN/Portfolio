@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container d-lg-flex justify-content-between align-items-center">
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Services</li>
+
+          <li class="current">Développement Logiciels</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Portfolio Details Section -->
+  <section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+            <h2>Développement Logiciels
+           </h2>
+           <p>
+            J'accompagne les entreprises agricoles en leur offrant des solutions sur mesure pour améliorer
+     leurs rendements, optimiser leurs processus et relever leurs défis spécifiques. Mon objectif 
+     est d’aider les exploitants à tirer le meilleur parti des nouvelles technologies et des outils
+      numériques pour transformer leur activité.
+
+        </p>
+          </div>
+
+        <div class="col-mb-4">
+          <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+            <h3>Outils</h3>
+            <ul>
+              <li><strong>Django (Python)</strong>
+            <li><strong>HTML</strong>
+                <li><strong>CSS</strong>
+                    <li><strong>JavaScript</strong>
+                        <li><strong>Bootstrap</strong>
+                            <li><strong>PostgreSQL</strong>
+                                <li><strong>GitHub</strong>
+
+
+          </ul>    
+
+          </div>
+        </div>
+
+          <div class="col-mb-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+             
+          <h3>Compétences</h3>
+          <ul>
+                <li><strong>    Analyse des besoins fonctionnels et techniques.
+
+                </strong>
+                <li><strong>    Développement d’applications robustes et sécurisées.
+                    </strong>
+                <li><strong>    Création d’interfaces utilisateur intuitives et responsives.
+                </strong>
+                <li><strong>    Intégration avec des bases de données pour la gestion et le stockage des données.
+                </strong>
+
+               
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+
+{% endblock content %}
