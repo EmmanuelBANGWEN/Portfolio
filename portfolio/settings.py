@@ -123,5 +123,7 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-EMAIL_HOST_USER = 'bikoyemmanuel531@gmail.com'
-EMAIL_HOST_PASSWORD = 'ywvm uols wmhe jymi'
+from decouple import config
+
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
