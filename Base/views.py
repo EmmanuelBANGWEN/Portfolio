@@ -7,10 +7,9 @@ from .forms import ContactForm
 from django.core.mail import send_mail
 
 
-
 # from django.contrib.auth.decorators import login_required
-def home(request):
-    return render(request,'index.html')
+# def home(request):
+#     return render(request,'index.html')
 
 
 # # @login_required(login_url='')
@@ -82,31 +81,52 @@ def bigdata(request):
 def nutrition(request):
     return render(request, 'nutrition.html')
 
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.contrib import messages
+from .forms import ContactForm
+from .models import Contact  # Import du modèle Contact si tu l'utilises
+from django.conf import settings
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.contrib import messages
+from .forms import ContactForm
+from django.conf import settings
+from .models import Contact
 
-def contact(request):
+def home(request):
     if request.method == 'POST':
-            form = ContactForm(request.POST)
-            if form.is_valid():
-                name = form.cleaned_data['name']
-                email = form.cleaned_data['email']
-                number = form.cleaned_data['number']
-                message = form.cleaned_data['message']
-                    
-                # Logique pour envoyer un email (ou sauvegarder dans la base de données)
-                send_mail(
-                    number=f"Message de : {name}",
-                    message=f"number: {number}\n\nMessage: {message}",
-                    from_email=email,
-                    recipient_list=['bikoyemmanuel531@gmail.com'],  # Remplacez par l'email de réception
-                    
-                    )
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            number = form.cleaned_data['number']
+            message = form.cleaned_data['message']
 
-                
-                messages.success(request, 'Votre message a été envoyé avec succès!')
-                return redirect('contact')  # Redirection après succès
-    
-     
+            # Enregistrement en base de données
+            Contact.objects.create(
+                name=name,
+                email=email,
+                number=number,
+                message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {name}",
+                message=f"De : {name} ({email})\nNuméro : {number}\n\n{message}",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('home')  # Redirection pour éviter les resoumissions
     else:
         form = ContactForm()
-    return render(request, 'home.html', {'form': form})  # Retour au formulaire si GET
 
+    return render(request, 'index.html', {'form': form})
+
+def success_view(request):
+    return HttpResponse("Merci ! Votre message a bien été envoyé.")

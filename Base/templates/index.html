@@ -331,81 +331,109 @@
     </section><!-- /Services Section -->
     
     
-   <!-- Contact Section -->
-   <section id="contact" class="contact section">
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
-    <div class="container" data-aos="fade">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        </div><!-- End Section Title -->
 
-      <div class="row gy-5 gx-lg-5">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="col-lg-4">
+        <div class="row gy-4">
 
-          <div class="info">
-            <h3>Contactez-nous</h3>
-            <p>N'hésitez pas à nous contacter pour plus d'informations sur nos services d'analyse de données, gestion de fermes, et plus encore.</p>
-            <div class="info-item d-flex">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
+          <div class="col-lg-5">
+            {% if messages %}
+            <div class="alert alert-success">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+            <div class="info-wrap">
+              <h3>Contactez-moi</h3>
+              <p>N'hésitez pas à me contacter pour plus d'informations sur mes services</p>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
                 <h4>Localisation:</h4>
                 <p>Cameroun, Yaounde</p>
               </div>
-            </div><!-- End Info Item -->
+              </div><!-- End Info Item -->
 
-            <div class="info-item d-flex">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
                 <h4>Email:</h4>
                 <p>bikoyemmanuel531@gmail.com</p>
-                <!-- <p>bikoyemmanuel531@gmail.com</p> -->
-              </div>
-            </div><!-- End Info Item -->
+                
+                </div>
+              </div><!-- End Info Item -->
 
-            <div class="info-item d-flex">
-              <i class="bi bi-phone flex-shrink-0"></i>
-              <div>
-                <h4>Call:</h4>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
                 <p>+237 655 372 703</p>
-              </div>
-            </div><!-- End Info Item -->
+              
+                </div>
+              </div><!-- End Info Item -->
 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254777.89709707818!2d11.345629031041577!3d3.8306320142293777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf7a309a7977%3A0x7f54bad35e693c51!2zWWFvdW5kw6k!5e0!3m2!1sfr!2scm!4v1734483440922!5m2!1sfr!2scm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
+          
+          <div class="col-lg-7">
+            <form action="{% url 'home' %}" method="post" class="py-email-form" data-aos="fade-up" data-aos-delay="200">
+              <!-- <form method="POST" action="{% url 'home' %}"> -->
+                {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Nom</label>
+                  <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="number-field" class="pb-2">Numéro</label>
+                  <input type="text" class="form-control" id="number" name="number" value="{{ form.number.value|default:'' }}" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required>{{ form.message.value|default:'' }}</textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- <div class="loading">Loading</div> -->
+                  <div class="error-message"></div>
+                  <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
+
+                  <!-- <button type="submit">Send Message</button> -->
+                  <button type="submit" class="btn btn-success ">Envoyer</button>
+
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
 
         </div>
 
-        <div class="col-lg-8">
-          <h3>Contactez-nous</h3>
-          <form method="post" action="{% url 'contact' %}" >
-            {% csrf_token %}
-            {% if messages %}
-              <div class="alert alert-success">
-                  {% for message in messages %}
-                      {{ message }}
-                  {% endfor %}
-              </div>
-            {% endif %}
-            <div class="mb-3">
-              <label for="name" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="mb-3">
-              <label for="email" class="form-label">Adresse Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Numéro de téléphone</label>
-            <input type="text" class="form-control" name="subject" id="subject" required>
-          </div>
-          <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-success">Send Message</button>
-      </form>
-  </div>
-</div>
-    </div>
+      </div>
 
-  </section><!-- /Contact Section -->
+    </section><!-- /Contact Section -->
+
+
+  
         </div>
 
       </div>

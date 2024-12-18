@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactez-nous</title>
+    <!-- Ajout de Bootstrap pour le design -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="col-lg-8 offset-lg-2">
+            <h3 class="text-center mb-4">Contactez-nous</h3>
+
+            <!-- Affichage des messages -->
+            {% if messages %}
+                <div class="alert alert-success">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Formulaire -->
+            <form method="POST">
+                {% csrf_token %}
+
+                <!-- Champ Nom -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
+                </div>
+
+                <!-- Champ Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
+                </div>
+
+                <!-- Champ Numéro de téléphone -->
+                <div class="mb-3">
+                    <label for="number" class="form-label">Numéro de téléphone</label>
+                    <input type="text" class="form-control" id="number" name="number" value="{{ form.number.value|default:'' }}" required>
+                </div>
+
+                <!-- Champ Message -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required>{{ form.message.value|default:'' }}</textarea>
+                </div>
+
+                <!-- Bouton Envoyer -->
+                <button type="submit" class="btn btn-success w-100">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
