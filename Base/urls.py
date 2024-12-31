@@ -17,6 +17,8 @@ urlpatterns=[
     path('services/bangri',views.bangri, name = 'bangri'),
     path('services/bangpig',views.bangpig, name = 'bangpig'),
     path('services/zbang',views.zbang, name = 'zbang'),
+    path('services/bangquiz',views.bangquiz, name = 'bangquiz'),
+
     path('ebook/optimisationia',views.optimisation, name = 'optimisation'),
     path('ebook/bigdata',views.bigdata, name = 'bigdata'),
     path('ebook/nutritionia',views.nutrition, name = 'nutrition'),

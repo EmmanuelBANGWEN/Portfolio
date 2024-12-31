@@ -72,6 +72,9 @@ def bangpig(request):
 def zbang(request):
     return render(request, 'zbang.html')
 
+def bangquiz(request):
+    return render(request, 'bangquiz.html')
+
 def optimisation(request):
     return render(request, 'optimisation.html')
 
