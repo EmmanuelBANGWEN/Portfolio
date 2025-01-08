@@ -5,6 +5,10 @@ from Base import models
 from Base.models import Contact 
 from .forms import ContactForm
 from django.core.mail import send_mail
+from django.contrib import messages
+from .forms import ContactForm
+from django.conf import settings
+from .models import Contact
 
 
 # from django.contrib.auth.decorators import login_required
@@ -84,18 +88,7 @@ def bigdata(request):
 def nutrition(request):
     return render(request, 'nutrition.html')
 
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.contrib import messages
-from .forms import ContactForm
-from .models import Contact  # Import du modèle Contact si tu l'utilises
-from django.conf import settings
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.contrib import messages
-from .forms import ContactForm
-from django.conf import settings
-from .models import Contact
+
 
 def home(request):
     if request.method == 'POST':
