@@ -24,9 +24,10 @@ urlpatterns=[
     path('ebook/bigdata',views.bigdata, name = 'bigdata'),
     path('ebook/nutritionia',views.nutrition, name = 'nutrition'),
     
-    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    path('robots.txt', views.robot, name='robot'),
 
     path('sitemap.xml', views.sitemap_view, name='sitemap'),
+
 
 
 ]
