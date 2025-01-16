@@ -126,3 +126,6 @@ def home(request):
 
 def success_view(request):
     return HttpResponse("Merci ! Votre message a bien été envoyé.")
+
+def sitemap_view(request):
+    return render(request, 'sitemap.xml')
