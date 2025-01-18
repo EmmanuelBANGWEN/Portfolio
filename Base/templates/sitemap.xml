@@ -1,64 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-    <loc>https://www.emmanuelbangwen.com/</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>1.00</priority>
+<loc>https://www.emmanuelbangwen.com/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/app/bangri</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/blog/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/app/bangpig</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/app/bangri</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/app/bangquiz</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/app/bangpig</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/ebook/optimisationia</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/app/bangquiz</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/ebook/bigdata</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/ebook/optimisationia</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/ebook/nutritionia</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/ebook/bigdata</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/services/consultations_agtech</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/ebook/nutritionia</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/services/developpement_logiciel</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/services/consultations_agtech</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/services/marketing_digital</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/services/developpement_logiciel</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/services/business_intelligent</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/services/marketing_digital</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.emmanuelbangwen.com/services/transformation_digital</loc>
-    <lastmod>2025-01-16T09:24:22+00:00</lastmod>
-    <priority>0.80</priority>
+<loc>https://www.emmanuelbangwen.com/services/business_intelligent</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/services/transformation_digital</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/about/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/formations/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/1/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/2/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/3/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/4/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/5/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/6/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/7/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/8/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/9/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/10/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/article/11/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.emmanuelbangwen.com/blog/tarifs/</loc>
+<lastmod>2025-01-18T23:23:39+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 </urlset>
