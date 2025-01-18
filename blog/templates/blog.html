@@ -1,0 +1,35 @@
+{% extends 'baseblog.html' %}
+{% load static %}
+
+{% block content %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{% static "blog/assets/img/2c.jpg" %}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Bang Blog</h1>
+                            <span class="subheading">Blog crée par Emmanuel Bangwen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+        <!-- Main Content-->
+        {% for article in articles %}
+    <div class="post-preview">
+        <a href="{% url 'blog_details' article.id %}">
+            <h2 class="post-title">{{ article.title }}</h2>
+            <h3 class="post-subtitle">{{ article.subtitle }}</h3>
+        </a>
+        <p class="post-meta">
+            Publié par <a href="/">{{ article.author }}</a> le {{ article.date }}
+        </p>
+    </div>
+{% endfor %}
+</div></div></div>
+
+{% endblock content %}

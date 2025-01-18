@@ -1,0 +1,55 @@
+{% extends 'baseblog.html' %}
+{% load static %}
+
+{% block content %}
+<header class="masthead" style="background-image: url('{% static "blog/assets/img/about-bg.jpg" %}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading section-title text-center mb-4">
+                    <h1>About</h1>
+                    <!-- <span class="subheading section-title text-center mb-4">Bienvenue sur mon blog !</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h3 class="section-title text-center mb-4">À propos de mon blog</h3>
+                <p class="lead text-justify">
+                     Je suis Emmanuel Bangwen, étudiant en ingénierie agronomique et passionné par la transformation du secteur agricole grâce à l’innovation technologique. Ce blog est une plateforme dédiée à l’exploration des technologies modernes, des solutions AgTech, et des outils numériques qui révolutionnent la façon dont nous cultivons, élevons et optimisons nos ressources agricoles.
+                </p>
+                <h3 class="mt-4 mb-3">Pourquoi ce blog ?</h3>
+                <p>
+                    Dans un monde où la technologie évolue à une vitesse fulgurante, l’agriculture ne peut se permettre de rester en arrière. Ce blog vise à :
+                </p>
+                <ul>
+                    <li><strong>Éduquer :</strong> Offrir des ressources pratiques sur des sujets comme Python, Django, l’analyse de données, et leur application dans l’agriculture.</li>
+                    <li><strong>Inspirer :</strong> Mettre en lumière mes projets innovants </li>
+                    <li><strong>Connecter :</strong> Créer un espace pour partager des idées sur l’avenir de l’agriculture grâce à la technologie.</li>
+                </ul>
+                <h3 class="mt-4 mb-3">Ce que vous trouverez ici</h3>
+                <ul>
+                    <li><strong>Des Projets Innovants :</strong> Découvrez mes réalisations comme BangPig, une application pour la gestion des fermes, ou BangQuiz, un jeu éducatif en Python.</li>
+                    <li><strong>Ressources AgTech :</strong> Explorez des livres et des outils sur des sujets comme l’intelligence artificielle et le Big Data en agriculture.</li>
+                    <li><strong>Services Personnalisés :</strong> J’offre des services en consultation, développement logiciel, marketing digital, et business intelligence pour aider les entreprises.</li>
+                    <li><strong>Guides Pratiques :</strong> Apprenez à utiliser des outils comme Power BI, PostgreSQL ou Excel pour optimiser les rendements agricoles.</li>
+                </ul>
+                <h3 class="mt-4 mb-3">Mon engagement</h3>
+                <p>
+                    Mon blog n’est pas seulement une vitrine de mes compétences, mais un engagement à apporter une réelle valeur au secteur agricole. Je crois en une agriculture moderne, où les décisions sont guidées par des données fiables et des outils technologiques adaptés.
+                </p>
+                <h3 class="mt-4 mb-3">À qui s’adresse ce blog ?</h3>
+                <p>
+                    Que vous soyez agriculteur, étudiant, entrepreneur ou simplement curieux de découvrir comment la technologie peut transformer le monde agricole, ce blog est pour vous ! Je vous invite à explorer, poser vos questions, et rejoindre cette aventure vers une agriculture plus innovante, durable et efficace.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

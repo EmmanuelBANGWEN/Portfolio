@@ -1,0 +1,91 @@
+{% extends 'baseblog.html' %}
+{% load static %}
+
+{% block content %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{% static "blog/assets/img/re.jpg" %}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{ article.title }}</h1>
+                            <div class="meta text-muted">
+                                <p class="mb-1">Publié par <strong>{{ article.author }}</strong> le <time datetime="{{ article.date|date:'Y-m-d' }}">{{ article.date }}</time></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+
+                        <!-- Introduction -->
+                        <p><strong>{{ article.introduction }}</strong></p>
+
+                        <!-- Sections -->
+                        {% for section in article.sections %}
+                            <h2>{{ section.title }}</h2>
+                            <p>{{ section.content }}</p>
+
+                            <!-- Subsections -->
+                            {% if section.subsections %}
+                                {% for subsection in section.subsections %}
+                                    <h3>{{ subsection.title }}</h3>
+                                    <p>{{ subsection.content }}</p>
+
+                                    <!-- Advantages -->
+                                    {% if subsection.advantages %}
+                                        <ul>
+                                            {% for advantage in subsection.advantages %}
+                                                <li>{{ advantage }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+
+                            <!-- Examples -->
+                            {% if section.examples %}
+                                <h3>Exemples</h3>
+                                {% for example in section.examples %}
+                                    <h4>{{ example.title }}</h4>
+                                    <p>{{ example.content }}</p>
+                                {% endfor %}
+                            {% endif %}
+
+                            <!-- Benefits -->
+                            {% if section.benefits %}
+                                <h3>Bénéfices</h3>
+                                <ul>
+                                    {% for benefit in section.benefits %}
+                                        <li>{{ benefit }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                            <!-- Challenges -->
+                            {% if section.challenges %}
+                                <h3>Défis</h3>
+                                <ul>
+                                    {% for challenge in section.challenges %}
+                                        <li>{{ challenge }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+
+                        <!-- Conclusion -->
+                        <h2>Conclusion</h2>
+                        <p>{{ article.conclusion }}</p>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+{% endblock content %}

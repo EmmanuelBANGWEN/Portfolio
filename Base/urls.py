@@ -1,4 +1,4 @@
-from django.urls import path 
+from django.urls import path , include
 from . import views
 from django.views.generic import TemplateView
 
@@ -28,6 +28,7 @@ urlpatterns=[
 
     path('sitemap.xml', views.sitemap_view, name='sitemap'),
 
+    path('blog/', include('blog.urls')),  # Inclusion des URLs du blog
 
 
 ]
