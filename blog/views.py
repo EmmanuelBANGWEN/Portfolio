@@ -186,7 +186,7 @@ def final_aliment(request):
             # Envoi de l'email
             send_mail(
                 subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com  pour payer la formation de precision",
-                message=f"Venu du site web emmanuelbangwen.com pour payer la formation aliment de precision : ({email})",
+                message=f"De : {name}\nNuméro : {number}\nVenu du site web emmanuelbangwen.com pour payer la formation aliment de precision : ({email})",
                 from_email=email,
                 recipient_list=[settings.EMAIL_HOST_USER],
                 fail_silently=False,
@@ -224,7 +224,7 @@ def final_python(request):
             # Envoi de l'email
             send_mail(
                 subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour payer la formation python",
-                message=f"Venu du site web emmanuelbangwen.com pour payer la formation python : ({email})",
+                message=f"De : {name}\nNuméro : {number}\nVenu du site web emmanuelbangwen.com pour payer la formation python : ({email})",
                 from_email=email,
                 recipient_list=[settings.EMAIL_HOST_USER],
                 fail_silently=False,
@@ -264,7 +264,7 @@ def final_booster(request):
             # Envoi de l'email
             send_mail(
                 subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour payer la formation sur l'Intelligence Artificielle",
-                message=f"Venu du site web emmanuelbangwen.com pour le guide aliment de precision l'Intelligence Artificielle : ({email})",
+                message=f"De : {name}\nNuméro : {number}\nVenu du site web emmanuelbangwen.com pour le guide aliment de precision l'Intelligence Artificielle : ({email})",
                 from_email=email,
                 recipient_list=[settings.EMAIL_HOST_USER],
                 fail_silently=False,
