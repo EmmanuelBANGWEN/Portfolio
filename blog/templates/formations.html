@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title>Emmanuel Bangwen - Site Officiel</title>
-        <meta name="description" content="Emmanuel Bangwen - Étudiant Ingénieur Agronome & Développeur Python. Passionné par l'AgTech et l'analyse de données agricoles.">
+        <meta name="description" content="Emmanuel Bangwen -  Ingénieur Agronome & Développeur Python. Passionné par l'AgTech et l'analyse de données agricoles.">
       <meta name="keywords" content="AgTech, Python, Développement Web, Analyse de données, Business Intelligence, Transformation Digitale, Agriculture">
       <meta name="author" content="Emmanuel Bangwen">
       <meta property="og:title" content="Emmanuel Bangwen | Ingénieur Agronome & Développeur">
@@ -28,6 +28,7 @@
     <title>Formations et Coaching</title>
     <style>
         body {
+            
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -35,31 +36,15 @@
         }
 
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #28a745, #c8f1c8);
+
             color: white;
             padding: 20px;
             text-align: center;
             position: relative;
         }
 
-        .home-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: white;
-            color: #4CAF50;
-            border: 2px solid #4CAF50;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .home-button:hover {
-            background-color: #45a049;
-            color: white;
-        }
+   
 
         .container {
             margin: 20px auto;
@@ -89,7 +74,7 @@
             margin-top: 20px;
             padding: 10px 20px;
             color: white;
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #28a745, #c8f1c8);
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
@@ -144,8 +129,8 @@
 <body>
 
 <header>
-    <a href="{% url 'homeblog' %}" class="home-buttonn">Home</a>
-    <a href="{% url 'tarifs' %}" class="home-buttonn">Tarifs</a>
+    <!-- <a href="{% url 'homeblog' %}" class="home-buttonn">Home</a>
+    <a href="{% url 'home' %}" class="home-buttonn">Tarifs</a> -->
 
     <h1>Formations et Coaching</h1>
     <p>Apprenez, progressez et transformez vos compétences avec nos formations exclusives.</p>
@@ -155,20 +140,20 @@
 
     <div class="section">
         <h2>Deviens un développeur Python professionnel</h2>
-        <p>Maîtrisez l'un des langages de programmation les plus demandés et commencez votre carrière de développeur Python. Apprenez les bases, approfondissez vos connaissances en frameworks comme Django et créez des projets concrets pour enrichir votre portfolio.</p>
-        <a href="{% url 'tarifs' %}" class="cta">Je veux devenir développeur Python</a>
+        <p>Maîtrisez l'un des langages de programmation les plus demandés et commencez votre carrière de développeur Python. Apprenez les bases, approfondissez vos connaissances en science de données et en developpement web avec le framework Django et créez des projets concrets pour enrichir votre portfolio.</p>
+        <a href="{% url 'python' %}" class="cta">Je veux devenir développeur Python</a>
     </div>
 
     <div class="section">
         <h2>Booster votre productivité avec les outils d'intelligence artificielle</h2>
         <p>Découvrez comment intégrer des outils basés sur l'IA dans votre quotidien pour automatiser vos tâches, gagner du temps et être plus efficace. Cette formation vous guidera pas à pas pour exploiter tout le potentiel des technologies modernes.</p>
-        <a href="{% url 'tarifs' %}" class="cta">Boostez votre productivité</a>
+        <a href="{% url 'booster' %}" class="cta">Boostez votre productivité</a>
     </div>
 
     <div class="section">
         <h2>Formulation rapide d'aliments adaptés grâce à l'IA</h2>
         <p>Vous êtes ingénieur agronome ou passionné par l'agriculture? Apprenez à utiliser des outils d'intelligence artificielle pour formuler des aliments adaptés à vos animaux en un temps record. Cette formation pratique est conçue pour vous donner un avantage compétitif dans votre domaine.</p>
-        <a href="{% url 'tarifs' %}" class="cta">Je veux maîtriser ces outils</a>
+        <a href="{% url 'aliments' %}" class="cta">Je veux maîtriser ces outils</a>
     </div>
 
     

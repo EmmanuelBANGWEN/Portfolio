@@ -1,6 +1,17 @@
 import json
 from django.shortcuts import render
 from django.templatetags.static import static
+from django.shortcuts import render ,redirect
+from django.http import HttpResponse
+from django.contrib import messages
+from Base import models
+from Base.models import Contact 
+from .forms import ContactForm
+from django.core.mail import send_mail
+from django.contrib import messages
+from .forms import ContactForm, ContactFormu
+from django.conf import settings
+from .models import Contact
 
 # def homeblog(request):
 #     return render(request, 'blog.html')
@@ -46,12 +57,232 @@ def formations(request):
 def contact(request):
     return render(request, 'contact.html')
 
-# def blog_details(request):
-#     return render(request, 'blog_details.html')
+def aliments(request):
+    if request.method == 'POST':
+        form = ContactFormu(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            # name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            # number = form.cleaned_data['number']
+            # message = form.cleaned_data['message']
+
+            # Enregistrement en base de données
+            Contact.objects.create(
+                # name=name,
+                email=email,
+                # number=number,
+                # message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour le guide aliment de precision",
+                message=f"Venu du site web emmanuelbangwen.com pour le guide gratuit aliment de precision : ({email})",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('aliments')  # Redirection pour éviter les resoumissions
+    else:
+        form = ContactForm()
+    return render(request, 'aliments.html')
+
+def python(request):
+    if request.method == 'POST':
+        form = ContactFormu(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            # name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            # number = form.cleaned_data['number']
+            # message = form.cleaned_data['message']
+
+            # Enregistrement en base de données
+            Contact.objects.create(
+                # name=name,
+                email=email,
+                # number=number,
+                # message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour le guide gratuit python",
+                message=f"Venu du site web emmanuelbangwen.com pour le guide gratuit python : ({email})",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('python')  # Redirection pour éviter les resoumissions
+    else:
+        form = ContactForm()
+    return render(request, 'python.html')
+
+# def booster(request):
+    
+def booster(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            number = form.cleaned_data['number']
+            message = form.cleaned_data['message']
+
+            # Enregistrement en base de données
+            Contact.objects.create(
+                name=name,
+                email=email,
+                number=number,
+                message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com le guide gratuit sur l'Intelligence Artificielle",
+                message=f"Venu du site web emmanuelbangwen.com pour le guide aliment de precision : ({email})",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('booster')  # Redirection pour éviter les resoumissions
+    else:
+        form = ContactForm()
+
+    return render(request, 'booster.html', {'form': form})
+
+    # return render(request, 'booster.html')
+
+# def final_aliment(request):
+#     return render(request, 'final_aliment.html')
 
 
-def tarifs(request):
-    return render(request, 'tarifs.html')
+def final_aliment(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            number = form.cleaned_data['number']
+            message = form.cleaned_data['message']
+
+            # Enregistrement en base de données
+            Contact.objects.create(
+                name=name,
+                email=email,
+                number=number,
+                message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com  pour payer la formation de precision",
+                message=f"Venu du site web emmanuelbangwen.com pour payer la formation aliment de precision : ({email})",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('final_aliment')  # Redirection pour éviter les resoumissions
+    else:
+        form = ContactForm()
+
+    return render(request, 'final_aliment.html', {'form': form})
+
+    # return render(request, 'inscription.html')  # Crée ce fichier dans templates/
+
+
+def final_python(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            number = form.cleaned_data['number']
+            message = form.cleaned_data['message']
+
+            # Enregistrement en base de données
+            Contact.objects.create(
+                name=name,
+                email=email,
+                number=number,
+                message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour payer la formation python",
+                message=f"Venu du site web emmanuelbangwen.com pour payer la formation python : ({email})",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('final_python')  # Redirection pour éviter les resoumissions
+    else:
+        form = ContactForm()
+
+    return render(request, 'final_python.html', {'form': form})
+
+    # return render(request, 'inscription.html')  # Crée ce fichier dans templates/
+
+
+
+
+def final_booster(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Récupération des données
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            number = form.cleaned_data['number']
+            message = form.cleaned_data['message']
+
+            # Enregistrement en base de données
+            Contact.objects.create(
+                name=name,
+                email=email,
+                number=number,
+                message=message
+            )
+
+            # Envoi de l'email
+            send_mail(
+                subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour payer la formation sur l'Intelligence Artificielle",
+                message=f"Venu du site web emmanuelbangwen.com pour le guide aliment de precision : ({email})",
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+
+            messages.success(request, "Votre message a été envoyé avec succès !")
+            return redirect('final_booster')  # Redirection pour éviter les resoumissions
+    else:
+        form = ContactForm()
+
+    return render(request, 'final_booster.html', {'form': form})
+
+    # return render(request, 'inscription.html')  # Crée ce fichier dans templates/
+
+
+
+# def tarifs(request):
+#     return render(request, 'tarifs.html')
 
 
 from django.shortcuts import render, redirect
@@ -87,7 +318,7 @@ def contact_view(request):
     else:
         form = ContactForm()
 
-    return render(request, 'tarifs.html', {'form': form})
+    return render(request, 'home.html', {'form': form})
 
 
 import os

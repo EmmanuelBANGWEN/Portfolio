@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Emmanuel Bangwen - Ingénieur Agronome & Développeur Python. Passionné par l'AgTech et l'analyse de données agricoles.">
+  <meta name="keywords" content="AgTech, Python, Développement Web, Analyse de données, Business Intelligence, Transformation Digitale, Agriculture">
+  <meta name="author" content="Emmanuel Bangwen">
+  <meta property="og:title" content="Emmanuel Bangwen | Ingénieur Agronome & Développeur">
+  <meta property="og:description" content="Découvrez mes projets en AgTech, mes compétences en Python, et mes services en développement logiciel et business intelligence.">
+  <meta property="og:image" content="{% static 'assets/img/Emmanuel_Bangwen.png' %}">
+  <meta property="og:url" content="emmanuelbangwen.com">
+  <link rel="icon" type="image/png" href="{%static 'assets/img/favicon.png'%}">
+  <meta property="og:type" content="website">
+  
+  
+    <!-- Favicons -->
+    <link href="{%static 'assets/img/icon.png'%}" rel="icon">
+    <link href="{%static 'assets/img/icon.png'%}" rel="apple-touch-icon">
+    <link rel="canonical" href="https://www.emmanuelbangwen.com/" />
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation : Formulation des Aliments pour Animaux</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #28a745, #c8f1c8);
+        }
+        .hero-section {
+            text-align: center;
+            padding: 60px 15px;
+            /* background: url('https://source.unsplash.com/1600x900/?farm,animals') center/cover; */
+            color: white;
+        }
+        .cta-button {
+            background: #ff5722;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .offer {
+            background: #ffcc00;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 8px;
+        }
+        .video-section {
+            text-align: center;
+            padding: 40px 15px;
+        }
+        .details-section {
+            padding: 40px 15px;
+            background: white;
+        }        
+        .inscription-section {
+            padding: 40px 15px;
+        }
+        .guarantee-section {
+            padding: 40px 15px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <span class="offer">🔥 Offre exclusive - 250€ (160.000 FCFA) au lieu de 699€ (450.000 FCFA) (Seulement 48h) 🔥</span>
+        <h1 class="text-black">Apprenez à formuler des aliments pour animaux en toute simplicité grâce aux nouvelles technologies !</h1>
+        <p class="text-black">Maîtrisez l’art de la formulation en un temps record avec notre formation.</p>
+        <a href="#inscription" class="cta-button">Je rejoins la formation maintenant</a>
+    </section>
+
+    <!-- <sectio -->
+
+    <section class="details-section container">
+        <h2>📚 Contenu de la formation</h2>
+        <ul>
+            <li><strong>Module 1 :</strong> Bases de la nutrition animale</li>
+            <li><strong>Module 2 :</strong> Techniques de formulation</li>
+            <li><strong>Module 3 :</strong> Optimisation des coûts</li>
+            <li><strong>Module 4 :</strong> Logiciels et outils pratiques</li>
+            <li><strong>+ Accès à un support personnalisé</strong></li>
+        </ul>
+    </section>
+
+    <section class="guarantee-section">
+        <h2>✅ Garantie Satisfaction</h2>
+        <p>Si vous n’êtes pas satisfait sous 7 jours, nous vous remboursons intégralement.</p>
+    </section>
+
+    <section class="details-section container">
+        <h2>🎁 Bonus exclusifs</h2>
+        <ul>
+            <li>Un guide PDF exclusif</li>
+            <li>Un accès à un groupe privé d’échange</li>
+            <li>Des cas pratiques et études réelles</li>
+        </ul>
+    </section>
+
+    <section class="cta-section text-center" id="inscription">
+        <a href="#inscription" class="cta-button">Je m'inscris maintenant pour 250€ (160.000 FCFA) 🔥</a>
+    </section>
+
+
+    <section class="cta-section text-center inscription-section " id="inscription">
+        <h2>Formulaire d'inscription</h2>
+        <p>Remplissez le formulaire pour vous inscrire.</p>
+        <div class="col-lg-5">
+            {% if messages %}
+            <div class="alert alert-success">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        </div>
+        <div class="col-lg-7">
+            <form action="{% url 'final_aliment' %}" method="post" class="py-email-form" data-aos="fade-up" data-aos-delay="200">
+              <!-- <form method="POST" action="{% url 'home' %}"> -->
+                {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Nom</label>
+                  <input type="text" class="form-control" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="number-field" class="pb-2">Numéro</label>
+                  <input type="text" class="form-control" id="number" name="number" value="{{ form.number.value|default:'' }}" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required>{{ form.message.value|default:'' }}</textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- <div class="loading">Loading</div> -->
+                  <div class="error-message"></div>
+                  <!-- <div class="sent-message">Your message has been sent. Thank you!</div> -->
+
+                  <!-- <button type="submit">Send Message</button> -->
+                  <button type="submit" class="btn btn-success ">Envoyer</button>
+
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+
+
+
+
+
+
+    </section>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

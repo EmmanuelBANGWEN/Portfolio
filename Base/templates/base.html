@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Emmanuel Bangwen - Site Officiel</title>
-  <meta name="description" content="Emmanuel Bangwen - Étudiant Ingénieur Agronome & Développeur Python. Passionné par l'AgTech et l'analyse de données agricoles.">
+  <meta name="description" content="Emmanuel Bangwen - Ingénieur Agronome & Développeur Python. Passionné par l'AgTech et l'analyse de données agricoles.">
 <meta name="keywords" content="AgTech, Python, Développement Web, Analyse de données, Business Intelligence, Transformation Digitale, Agriculture">
 <meta name="author" content="Emmanuel Bangwen">
 <meta property="og:title" content="Emmanuel Bangwen | Ingénieur Agronome & Développeur">
@@ -20,8 +20,8 @@
 
 
   <!-- Favicons -->
-  <link href="{%static 'assets/img/favicon.png'%}" rel="icon">
-  <link href="{%static 'assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+  <link href="{%static 'assets/img/icon.png'%}" rel="icon">
+  <link href="{%static 'assets/img/icon.png'%}" rel="apple-touch-icon">
   <link rel="canonical" href="https://www.emmanuelbangwen.com/" />
 
   <!-- Fonts -->
@@ -44,12 +44,15 @@
 <body class="index-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-  
+    <i class="widget header-toggle d-xl-none bi bi-list"></i>
+<style>
+  .widget {
+    background: linear-gradient(to right, #28a745, #c8f1c8);
+  }</style>
+<!--   
     <div class="profile-img">
       <img src="{% static 'assets/img/Emmanuel_Bangwen.png' %}" alt="Photo" class="img-fluid rounded-circle">
-    </div>
+    </div> -->
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -109,17 +112,17 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Bangri-AgTech</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Bangri -agtech</strong> <span>All Rights Reserved</span></p>
       </div>
-      <div class="credits">
-        Designed by <a href="https://www.linkedin.com/in/emmanuel-bangwen-75091117b/">Emmanuel Bangwen</a> Distributed by <a href="https://www.linkedin.com/company/bangri-agtech/">BangHub</a>
+      <div class="credits ">
+        Designed by <a href="https://www.linkedin.com/in/emmanuel-bangwen-75091117b/" class="text-black"><strong>Emmanuel Bangwen</strong></a> Distributed by <a href="https://www.linkedin.com/company/bangri-agtech/"class="text-black"><strong>BangHub</strong></a>
       </div>
     </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="widget scroll-top d-flex align-items-center justify-content-center"><i class=" bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
