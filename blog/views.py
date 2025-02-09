@@ -146,7 +146,7 @@ def booster(request):
             # Envoi de l'email
             send_mail(
                 subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com le guide gratuit sur l'Intelligence Artificielle",
-                message=f"Venu du site web emmanuelbangwen.com pour le guide aliment de precision : ({email})",
+                message=f"Venu du site web emmanuelbangwen.com pour le guide l'Intelligence Artificielle : ({email})",
                 from_email=email,
                 recipient_list=[settings.EMAIL_HOST_USER],
                 fail_silently=False,
@@ -264,7 +264,7 @@ def final_booster(request):
             # Envoi de l'email
             send_mail(
                 subject=f"Nouveau message de {email} Venu du site web emmanuelbangwen.com pour payer la formation sur l'Intelligence Artificielle",
-                message=f"Venu du site web emmanuelbangwen.com pour le guide aliment de precision : ({email})",
+                message=f"Venu du site web emmanuelbangwen.com pour le guide aliment de precision l'Intelligence Artificielle : ({email})",
                 from_email=email,
                 recipient_list=[settings.EMAIL_HOST_USER],
                 fail_silently=False,
