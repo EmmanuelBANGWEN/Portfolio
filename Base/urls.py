@@ -19,6 +19,7 @@ urlpatterns=[
     path('app/bangpig',views.bangpig, name = 'bangpig'),
     path('app/zbang',views.zbang, name = 'zbang'),
     path('app/bangquiz',views.bangquiz, name = 'bangquiz'),
+    path('app/fera',views.fera, name = 'fera'),
 
     path('ebook/optimisationia',views.optimisation, name = 'optimisation'),
     path('ebook/bigdata',views.bigdata, name = 'bigdata'),

@@ -88,6 +88,9 @@ def bigdata(request):
 def nutrition(request):
     return render(request, 'nutrition.html')
 
+def fera(request):
+    return render(request, 'fera.html')
+
 
 
 def home(request):
